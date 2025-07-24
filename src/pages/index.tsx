@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
-//import { products } from "@/data/products";
 import { fetchProducts } from "@/services/productService";
 import { useEffect, useState } from "react";
 

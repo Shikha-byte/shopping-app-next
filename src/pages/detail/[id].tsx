@@ -9,7 +9,7 @@ import { addToCartRequest } from "@/features/cart/cartSlice";
 
 interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
   description: string;
   category: string;
@@ -48,7 +48,7 @@ export default function ProductDetailPage() {
       <div className="max-w-5xl mx-auto p-4 flex flex-col md:flex-row gap-6">
         {/* Images */}
         <div className="flex-1">
-          <img src={product.image} alt={product.name} className="w-full max-h-[400px] object-contain rounded-lg" />
+          <img src={product.image} alt={product.title} className="w-full max-h-[400px] object-contain rounded-lg" />
           {/* Simulated additional images */}
           <div className="flex mt-4 gap-2">
             {[...Array(3)].map((_, i) => (
@@ -59,7 +59,7 @@ export default function ProductDetailPage() {
 
         {/* Details */}
         <div className="flex-1 space-y-4">
-          <h1 className="text-2xl font-bold">{product.name}</h1>
+          <h1 className="text-2xl font-bold">{product.title}</h1>
           <p className="text-gray-600">{product.description}</p>
 
           <div className="flex items-center gap-2">

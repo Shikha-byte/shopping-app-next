@@ -27,7 +27,7 @@ export default function CartPage() {
                   className="flex justify-between items-center p-4 border rounded-lg shadow-sm"
                 >
                   <div>
-                    <h2 className="text-lg font-semibold">{item.name}</h2>
+                    <h2 className="text-lg font-semibold">{item.title}</h2>
                     <p className="text-sm text-gray-600">Price: ₹{item.price}</p>
                     <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
                   </div>
