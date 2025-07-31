@@ -12,7 +12,7 @@ function* handleLogin(action: PayloadAction<{ email: string; password: string }>
     //const response = yield call(axios.post, '/api/auth/login', action.payload);
     const response = yield call(axios.post, 'http://localhost:5000/api/auth/login', action.payload);
     const { token } = response.data;
-    const user = { name: 'User', email: action.payload.email }; // You can update this later
+    const user = { name: action.payload.email, email: action.payload.email }; // You can update this later
     yield put(loginSuccess({ token, user }));
   } catch (error: any) {
     yield put(loginFailure(error.response?.data?.message || 'Login failed'));
